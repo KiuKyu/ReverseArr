@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [-3, 5, 1, 3, 2, 10];
+    let front = 0;
+    let back = arr.length - 1;
+
+    while (front < back) { 
+        let x = arr[front]; // Cần biến x để lưu giá trị cũ của front trước khi front giá trị của front bị thay đổi
+        arr[front] = arr[back]; // Lúc này giá trị của front đã bị thay đổi. 'x' thì vẫn đang lưu trữ giá trị cũ của front
+        arr[back] = x; // gán lại giá trị của back = giá trị của x (đang giữ của front)
+        front++; 
+        back--;
+    }
+    document.write(x);
+</script>
+</html>
